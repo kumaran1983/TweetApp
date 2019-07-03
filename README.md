@@ -15,7 +15,8 @@ The endpoint http://localhost:8080/tweets?limit=10 takes a optional limit query 
 the number of results returned by the API. If not the default is 10 (Top 10 hashtags).
 
 #### High level flow 
-1. First validate if the limit passed as query param is within the maximum allowed.If invalid throw 400 error. 
+
+1. Validate if the limit passed as query param is within the maximum allowed.If invalid throw 400 error. 
 2. Extract the hashtags from the tweets.
 3. Find the count of each unique hashtag.
 4. Pick the top 10 hashtags and return. 
@@ -24,12 +25,12 @@ Size of the dataset passed to the API ?
 
 There are 2 approaches presented to process the tweets 
 
-1. TweetServiceSequentialImpl - Processes the tweets sequentially
-2. TweetServiceParallelImpl - Processes the tweets using java parallel streams 
+1. Processes the tweets sequentially - TweetServiceSequentialImpl.java
+2. Processes the tweets using java parallel streams - TweetServiceParallelImpl
 
 Have to run performance tests for above approaches. 
 
-There are 2 approches to pick the top 10 hashtags 
+After getting the count for every unique hashtag there are 2 approches to pick the top 10 hashtags 
 1. Sort the unique hashtag in decending order of count. Pick the top 10. Time complexity nlogn where n is the number of
 hashtags
 2. Keep adding the hashtag with count into a minheap. Once the heap size exceeds the limit of 10 then pop 
