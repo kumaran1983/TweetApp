@@ -70,6 +70,10 @@ public class Tweet {
         return text;
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
+
     public String getSource() {
         return source;
     }

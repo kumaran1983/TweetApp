@@ -3,7 +3,6 @@ package com.salesforce.tweetapi.resource.entity;
 public class Message {
 
 	private MessageType messageType;
-	private MessageCategory messageCategory;
 	private int messageCode;
 	private String description;
 
@@ -11,21 +10,11 @@ public class Message {
 
 	}
 
-	public Message(MessageType messageType, int messageCode, String description, MessageCategory messageCategory) {
+	public Message(MessageType messageType, int messageCode, String description) {
 		super();
 		this.messageType = messageType;
 		this.messageCode = messageCode;
 		this.description = description;
-		this.messageCategory = messageCategory;
-	}
-	
-	public MessageCategory getMessageCategory() {
-		return messageCategory;
-	}
-
-
-	public void setMessageCategory(MessageCategory messageCategory) {
-		this.messageCategory = messageCategory;
 	}
 
 

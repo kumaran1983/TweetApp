@@ -1,4 +1,4 @@
-package com.salesforce.tweetapi.service;
+package com.salesforce.tweetapi.extractor;
 
 import com.salesforce.tweetapi.resource.entity.Tweet;
 import org.springframework.stereotype.Component;
@@ -16,6 +16,10 @@ public class HashTagExtractor implements IHashTagExtractor {
 
         //Using set to filter out duplicate hash tags in tweet.
         Set<String> hashTags = new HashSet<String>();
+
+        if(tweet.getText() == null) {
+            return hashTags;
+        }
 
         Matcher hashTagMatcher = Pattern.compile("#([a-z]+)", Pattern.CASE_INSENSITIVE).matcher(tweet.getText());
 

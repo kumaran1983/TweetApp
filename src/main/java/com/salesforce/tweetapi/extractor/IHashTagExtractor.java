@@ -1,4 +1,4 @@
-package com.salesforce.tweetapi.service;
+package com.salesforce.tweetapi.extractor;
 
 import com.salesforce.tweetapi.resource.entity.Tweet;
 

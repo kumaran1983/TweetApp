@@ -1,0 +1,31 @@
+[
+  {
+    "id": 6218016346307687282,
+    "id_str": "6218016346307687282",
+    "contributors": null,
+    "coordinates": {
+      "lat": "73.3294380554758",
+      "lng": "-135.14778637735031",
+      "state": "fl"
+    },
+    "created_at": "sun jun 16 00:00:00 +0000 2013",
+    "favorite_count": 1871,
+    "favorited": false,
+    "geo": null,
+    "in_reply_to_screen_name": null,
+    "in_reply_to_status_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_user_id": null,
+    "is_quote_status": false,
+    "lang": "kp",
+    "nil": null,
+    "place": null,
+    "possibly_sensitive": false,
+    "retweet_count": 3736,
+    "retweeted_status": null,
+    "retweeted": false,
+    "source": "<a href=\"http://example.com/herminia\" rel=\"nofollow\">jast-hegmann</a>",
+    "text": "you can't connect the matrix without navigating the multi-byte agp firewall! #opensource #crossplatform #opensource",
+    "truncated": false
+  }
+]
