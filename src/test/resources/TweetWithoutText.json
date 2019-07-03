@@ -1,0 +1,30 @@
+[
+  {
+    "id": 6756667725960625518,
+    "id_str": "6756667725960625518",
+    "contributors": null,
+    "coordinates": {
+      "lat": "-22.144749877542083",
+      "lng": "125.78936195294705",
+      "state": "SC"
+    },
+    "created_at": "Mon Sep 26 00:00:00 +0000 2016",
+    "favorite_count": 68,
+    "favorited": false,
+    "geo": null,
+    "in_reply_to_screen_name": null,
+    "in_reply_to_status_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_user_id": null,
+    "is_quote_status": false,
+    "lang": "IS",
+    "nil": null,
+    "place": null,
+    "possibly_sensitive": false,
+    "retweet_count": 8560,
+    "retweeted_status": null,
+    "retweeted": false,
+    "source": "<a href=\"http://example.com/edna\" rel=\"nofollow\">Anderson, Reichel and Hickle</a>",
+    "truncated": false
+  }
+]
