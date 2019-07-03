@@ -12,6 +12,8 @@ High level flow
 3. Find the count of each unique hashtag.
 4. Pick the top 10 hashtags and return. 
 
+How big could be the dataset passed to the API ? 
+
 There are 2 approaches presented to process the tweets 
 
 1. TweetServiceSequentialImpl - Processes the tweets sequentially
