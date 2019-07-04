@@ -21,6 +21,14 @@ the number of results returned by the API. If not the default is 10 (Top 10 hash
 3. Find the count of each unique hashtag.
 4. Pick the top 10 hashtags and return. 
 
+###### HashTag extraction Assumption
+For extracting the hash tags have used the pattern #([a-z]+) provided in the skeleton code. This pattern 
+will work for hashtags which only english characters. Will not match non english characters and numbers.
+Assumption made that hash tags contain only english characters. 
+
+
+###### Tweet processing
+
 Size of the dataset passed to the API ? 
 
 There are 2 approaches presented to process the tweets 
