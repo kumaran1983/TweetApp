@@ -59,7 +59,8 @@ public class TweetControllerTest {
 	public void testInputFileWithHashTags() {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-
+		
+		//Input file given in skeleton project
 		String jsonRequest = readInput("input.json");
 
 		HttpEntity<String> request = new HttpEntity<String>(jsonRequest, headers);
