@@ -20,7 +20,9 @@ public class HashTagExtractor implements IHashTagExtractor {
         if(tweet.getText() == null) {
             return hashTags;
         }
-
+        //Have used the Pattern provided in the skeleton code to filter out hash tags.
+        //Below pattern works good only for english characters. Non english and numbers will be excluded.
+        //Assumption : hash tags contain only english characters.
         Matcher hashTagMatcher = Pattern.compile("#([a-z]+)", Pattern.CASE_INSENSITIVE).matcher(tweet.getText());
 
         while(hashTagMatcher.find()) {
