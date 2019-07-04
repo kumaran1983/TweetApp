@@ -67,7 +67,11 @@ public class TweetControllerTest {
 		Assert.assertEquals(10, result.getBody().getTopTags().size());
 
 		Assert.assertEquals("program", result.getBody().getTopTags().get(0).getHashtag());
+		Assert.assertEquals(27, result.getBody().getTopTags().get(0).getCount());
+		
 		Assert.assertEquals("EXE", result.getBody().getTopTags().get(9).getHashtag());
+		Assert.assertEquals(15, result.getBody().getTopTags().get(9).getCount());
+		
 
 	}
 
