@@ -10,15 +10,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class TweetServiceTest {
+public class TopHashTagFilterTest {
 
     @Test
     public void testExtractingTopHashTags() {
 
         Map<String,Long> countByHashtag = new HashMap<>();
-        countByHashtag.put("hashtag1",10l);
-        countByHashtag.put("hashtag2",20l);
-        countByHashtag.put("hashtag3",30l);
+        countByHashtag.put("a",10l);
+        countByHashtag.put("b",20l);
+        countByHashtag.put("c",30l);
 
         TopHashTagFilter tweetService = new TopHashTagFilter();
         int limit = 2;
@@ -28,9 +28,9 @@ public class TweetServiceTest {
 
         List<String> hashTagNames = hashtags.stream().map(r -> r.getHashtag()).collect(Collectors.toList());
 
-        Assert.assertTrue(hashTagNames.contains("hashtag2"));
-        Assert.assertTrue(hashTagNames.contains("hashtag3"));
-        Assert.assertTrue(!hashTagNames.contains("hashtag1"));
+        Assert.assertTrue(hashTagNames.contains("b"));
+        Assert.assertTrue(hashTagNames.contains("c"));
+        Assert.assertFalse(hashTagNames.contains("a"));
 
 
     }
