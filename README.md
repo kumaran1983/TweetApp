@@ -16,10 +16,13 @@ the number of results returned by the API. If not the default is 10 (Top 10 hash
 
 #### High level flow 
 
-1. Validate if the limit passed as query param is within the maximum allowed.If invalid throw 400 error. 
-2. Extract the hashtags from the tweets.
-3. Find the count of each unique hashtag.
-4. Pick the top 10 hashtags and return. 
+1. TweetController is the class which recieves the request.
+2. TweetController uses LimitValidator to validate if the limit passed as query param is within 
+   the maximum allowed.If invalid throws 400 error. 
+3. TweetController calls TweetService to compute the top hashtags 
+4. TweetService iterates over the tweets and calls HashTagExtractor to extract the hashtags from the tweets and 
+   then uses TopHashTagFilter to filter out the top hash tag results.
+
 
 ##### HashTag extraction Assumption
 For extracting the hash tags have used the pattern #([a-z]+) provided in the skeleton code. This pattern 
@@ -33,10 +36,10 @@ Size of the dataset passed to the API ?
 
 There are 2 approaches presented to process the tweets 
 
-1. Processes the tweets sequentially - TweetServiceSequentialImpl.java
-2. Processes the tweets using java parallel streams - TweetServiceParallelImpl
+1. Processes the tweets using java parallel streams - TweetServiceParallelImpl
+2. Processes the tweets sequentially - TweetServiceSequentialImpl.java
 
-Have to run performance tests for above approaches. 
+Will update the performance test results for above approaches. 
 
 After getting the count for every unique hashtag there are 2 approches to pick the top 10 hashtags 
 1. Sort the unique hashtag in decending order of count. Pick the top 10. Time complexity nlogn where n is the number of
